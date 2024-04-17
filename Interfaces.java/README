@@ -1,0 +1,22 @@
+import java.util.Comparator;
+
+public class Student implements Comparator<Student> {
+    private int id;
+    private String name;
+
+    public Student(int ID, String name) {
+        this.id = ID;
+        this.name = name;
+    }
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        return Integer.compare(o1.id, o2.id);
+    }
+
+	@Override
+	public String toString() {
+		
+		return "Student [id=" + id + "]";
+	}
+}
